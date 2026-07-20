@@ -35,8 +35,8 @@ services:
   # 3. React Frontend
   frontend:
     # CHANGE THIS: Replace with your actual GitHub username
-    image: ghcr.io/tomyamn/langflow-springboot-backend:latest
-    container_name: intranet-langflow-frontend
+    image: ghcr.io/tomyamn/langflow-react-frontend:latest
+    container_name: intranet-langflow-react-frontend
     ports:
       - "3000:80"
     depends_on:
