@@ -1,27 +1,13 @@
-package com.tomyamn.langflow_intranet_springboot.model;
+package com.tomyamn.langflow_intranet_springboot.dto;
 
-import jakarta.persistence.*;
-import java.time.LocalDateTime;
-
-@MappedSuperclass
-public class User extends BaseEntity{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO extends BaseDTO {
     private Long id;
-
-    @Column(nullable = false)
     private String name;
-
     private String email;
-
-    @Column(name = "phone_no")
     private String phoneNo;
-
     private String nric;
 
-    // --- Getters and Setters ---
-
+    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

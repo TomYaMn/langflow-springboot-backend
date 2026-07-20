@@ -1,24 +1,17 @@
-package com.tomyamn.langflow_intranet_springboot.model;
+package com.tomyamn.langflow_intranet_springboot.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "listener_log")
-public class ListenerLog extends BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ListenerLogDTO extends BaseDTO {
     private Long id;
-
-    @Column(name = "response_body", columnDefinition = "LONGTEXT")
     private String responseBody;
-
     private String remark;
 
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
+
     public String getResponseBody() { return responseBody; }
     public void setResponseBody(String responseBody) { this.responseBody = responseBody; }
+
     public String getRemark() { return remark; }
     public void setRemark(String remark) { this.remark = remark; }
 }
